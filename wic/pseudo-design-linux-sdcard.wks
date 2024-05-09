@@ -1,0 +1,9 @@
+# short-description: Create SD card image formatted for pseudo-design-linux
+# long-description: Creates a partitioned SD card image. Boot files
+# are located in the first vfat partition.  Then two copies of the ROOTFS are created in
+# ext4 partitions.  Then a data partition is created.
+
+part /boot --source bootimg-partition --ondisk mmcblk0 --fstype=vfat --label boot --active --align 4 --size 64M
+part / --source rootfs --ondisk mmcblk0 --fstype=ext4 --label rootfs-0 --align 4 --size 1G
+part / --source rootfs --ondisk mmcblk0 --fstype=ext4 --label rootfs-1 --align 4 --size 1G --fsoptions "ro,suid,dev,noauto,nouser,async"
+part /mnt/data --ondisk mmcblk0 --fstype=ext4 --label rootfs-1 --align 4 --size 1216M  
