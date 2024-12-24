@@ -5,13 +5,13 @@ Subject: [PATCH] remove cpu1 from zynq-7000 device tree, as the single-core 7S
  on the Cora Z7 does not have a cpu1
 
 ---
- device_tree/data/kernel_dtsi/2024.1/zynq/zynq-7000.dtsi | 9 +--------
+ device_tree/data/kernel_dtsi/2024.2/zynq/zynq-7000.dtsi | 9 +--------
  1 file changed, 1 insertion(+), 8 deletions(-)
 
-diff --git a/device_tree/data/kernel_dtsi/2024.1/zynq/zynq-7000.dtsi b/device_tree/data/kernel_dtsi/2024.1/zynq/zynq-7000.dtsi
+diff --git a/device_tree/data/kernel_dtsi/2024.2/zynq/zynq-7000.dtsi b/device_tree/data/kernel_dtsi/2024.2/zynq/zynq-7000.dtsi
 index fa83f25..6f5d21c 100644
---- a/device_tree/data/kernel_dtsi/2024.1/zynq/zynq-7000.dtsi
-+++ b/device_tree/data/kernel_dtsi/2024.1/zynq/zynq-7000.dtsi
+--- a/device_tree/data/kernel_dtsi/2024.2/zynq/zynq-7000.dtsi
++++ b/device_tree/data/kernel_dtsi/2024.2/zynq/zynq-7000.dtsi
 @@ -42,13 +42,6 @@
  				333334  1000000
  			>;
