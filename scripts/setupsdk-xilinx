@@ -1,0 +1,24 @@
+# Xilinx environments need a few additional environment variables defined.
+# See https://github.com/Xilinx/yocto-scripts for details.
+
+# The "SRC_ROOT" variable should be defined to the root directory
+# containing your meta layers.  It defaults to $PWD/sources
+if [ -n "$SRC_ROOT" ]; then
+	export SRC_ROOT=$(readlink -f $(dirname "$SRC_ROOT"))
+else
+	export SRC_ROOT=$(readlink -f "${PWD}/sources")
+fi
+
+export TEMPLATECONF=$SRC_ROOT/meta-pseudo-design/conf/templates/default
+
+# Hacks required by the xilinx layers
+if [ -d $SRC_ROOT/meta-xilinx-internal/meta-xilinx-core/gen-machine-conf ]; then
+	export PATH=$PATH:$SRC_ROOT/meta-xilinx-internal/meta-xilinx-core/gen-machine-conf
+fi
+if [ -d $SRC_ROOT/meta-xilinx/meta-xilinx-core/gen-machine-conf ]; then
+        export PATH=$PATH:$SRC_ROOT/meta-xilinx/meta-xilinx-core/gen-machine-conf
+fi
+
+# Set up the yocto build environment, see: https://docs.yoctoproject.org/ref-manual/structure.html#oe-init-build-env
+source $SRC_ROOT/poky/oe-init-build-env "$@"
+
