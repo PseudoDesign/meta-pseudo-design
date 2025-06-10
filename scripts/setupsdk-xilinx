@@ -4,12 +4,12 @@
 # The "SRC_ROOT" variable should be defined to the root directory
 # containing your meta layers.  It defaults to $PWD/sources
 if [ -n "$SRC_ROOT" ]; then
-	export SRC_ROOT=$(readlink -f $(dirname "$SRC_ROOT"))
+	SRC_ROOT=$(readlink -f $(dirname "$SRC_ROOT"))
 else
-	export SRC_ROOT=$(readlink -f "${PWD}/sources")
+	SRC_ROOT=$(readlink -f "${PWD}/sources")
 fi
 
-export TEMPLATECONF=$SRC_ROOT/meta-pseudo-design/conf/templates/default
+TEMPLATECONF=$SRC_ROOT/meta-pseudo-design/conf/templates/default
 
 # Hacks required by the xilinx layers
 if [ -d $SRC_ROOT/meta-xilinx-internal/meta-xilinx-core/gen-machine-conf ]; then
