@@ -1,0 +1,25 @@
+header:
+  version: 14
+  includes:
+  - repo: meta-pd-xilinx
+    file: kas/inc/base.yml
+  - kas/inc/base.yml
+
+repos:
+  meta-pd-xilinx:
+    url: https://github.com/PseudoDesign/meta-pd-xilinx.git
+    branch: scarthgap
+
+
+machine: cora-z7
+target:
+  - core-image-base
+
+local_conf_header:
+  license: |
+    LICENSE_FLAGS_ACCEPTED = "xilinx"
+  cache: |
+    DL_DIR = "/home/adam/.yocto-dl"
+  debug_tweaks: |
+    EXTRA_IMAGE_FEATURES = " debug-tweaks"
+

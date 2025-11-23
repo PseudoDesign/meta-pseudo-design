@@ -1,0 +1,26 @@
+header:
+  version: 14
+
+distro: pd-linux
+
+repos:
+  meta-openembedded:
+    url: git://git.openembedded.org/meta-openembedded
+    branch: scarthgap
+    layers:
+      meta-oe:
+
+  openembedded-core:
+    url: git://git.openembedded.org/openembedded-core.git
+    branch: scarthgap
+    layers:
+      meta:
+
+  bitbake:
+    url: git://git.openembedded.org/bitbake.git
+    # yocto-5.0.13 tag
+    commit: 1c9ec1ffde75809de34c10d3ec2b40d84d258cb4
+    layers:
+      bitbake: disabled
+
+  meta-pseudo-design:
