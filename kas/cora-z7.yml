@@ -22,4 +22,14 @@ local_conf_header:
     DL_DIR = "/home/adam/.yocto-dl"
   debug_tweaks: |
     EXTRA_IMAGE_FEATURES = " debug-tweaks"
+  mender_config: |
+    # 16GiB total storage on SD card.
+    MENDER_STORAGE_TOTAL_SIZE_MB = "16384"
+    # 256MB partition for bootloader
+    MENDER_BOOT_PART_SIZE_MB = "256"
+    MENDER_FEATURES_ENABLE:append = " mender-uboot mender-image-sd"
+    MENDER_FEATURES_DISABLE:append = " mender-grub mender-image-uefi"
+    INHERIT += "mender-full"
+    MENDER_UBOOT_AUTO_CONFIGURE = "1"
+
 

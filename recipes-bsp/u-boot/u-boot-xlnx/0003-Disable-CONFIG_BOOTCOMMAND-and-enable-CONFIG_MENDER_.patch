@@ -1,0 +1,28 @@
+From 55f57d012ebf5f08e09938f2a1e2fc8c58c513f6 Mon Sep 17 00:00:00 2001
+From: Kristian Amlie <kristian.amlie@northern.tech>
+Date: Mon, 28 Aug 2017 18:12:37 +0200
+Subject: [PATCH] Disable CONFIG_BOOTCOMMAND and enable
+
+ CONFIG_MENDER_BOOTCOMMAND.
+
+Upstream-Status: Inappropriate
+Signed-off-by: Kristian Amlie <kristian.amlie@northern.tech>
+---
+ include/env_default.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/include/env_default.h b/include/env_default.h
+index ecb48f79a3b..d42abeb4cc0 100644
+--- a/include/env_default.h
++++ b/include/env_default.h
+@@ -40,8 +40,8 @@ const char default_environment[] = {
+ #ifdef	CONFIG_USE_BOOTARGS
+ 	"bootargs="	CONFIG_BOOTARGS			"\0"
+ #endif
+-#ifdef	CONFIG_BOOTCOMMAND
+-	"bootcmd="	CONFIG_BOOTCOMMAND		"\0"
++#ifdef	CONFIG_MENDER_BOOTCOMMAND
++	"bootcmd="	CONFIG_MENDER_BOOTCOMMAND	"\0"
+ #endif
+ #if defined(CONFIG_BOOTDELAY)
+ 	"bootdelay="	__stringify(CONFIG_BOOTDELAY)	"\0"

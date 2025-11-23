@@ -10,6 +10,10 @@ repos:
     layers:
       meta-oe:
 
+  meta-lts-mixins:
+    url: https://git.yoctoproject.org/meta-lts-mixins
+    commit: a44882db02a0ed0f149371831bfbe067665eb42b
+
   openembedded-core:
     url: git://git.openembedded.org/openembedded-core.git
     branch: scarthgap
@@ -22,5 +26,11 @@ repos:
     commit: 1c9ec1ffde75809de34c10d3ec2b40d84d258cb4
     layers:
       bitbake: disabled
+
+  meta-mender:
+    url: https://github.com/mendersoftware/meta-mender
+    branch: scarthgap
+    layers:
+      meta-mender-core:
 
   meta-pseudo-design:
