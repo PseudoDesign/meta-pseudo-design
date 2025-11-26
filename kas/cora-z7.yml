@@ -1,15 +1,8 @@
 header:
   version: 14
   includes:
-  - repo: meta-pd-xilinx
-    file: kas/inc/base.yml
+  - meta-pd-xilinx/kas/inc/base.yml
   - kas/inc/base.yml
-
-repos:
-  meta-pd-xilinx:
-    url: https://github.com/PseudoDesign/meta-pd-xilinx.git
-    branch: scarthgap
-
 
 machine: cora-z7
 target:
@@ -31,5 +24,6 @@ local_conf_header:
     MENDER_FEATURES_DISABLE:append = " mender-grub mender-image-uefi"
     INHERIT += "mender-full"
     MENDER_UBOOT_AUTO_CONFIGURE = "1"
+    MENDER_ARTIFACT_NAME = "pd_artifact"
 
 

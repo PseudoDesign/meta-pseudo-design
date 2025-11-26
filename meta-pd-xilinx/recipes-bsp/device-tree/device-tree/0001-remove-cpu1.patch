@@ -1,0 +1,36 @@
+From bf333d4c8e76be23b30bc82c0379a1eec15159f6 Mon Sep 17 00:00:00 2001
+From: Kas User <kas@example.com>
+Date: Fri, 31 Oct 2025 16:41:32 -0400
+Subject: [PATCH] remove cpu1
+
+---
+ device_tree/data/kernel_dtsi/2024.2/zynq/zynq-7000.dtsi | 9 +--------
+ 1 file changed, 1 insertion(+), 8 deletions(-)
+
+diff --git a/device_tree/data/kernel_dtsi/2024.2/zynq/zynq-7000.dtsi b/device_tree/data/kernel_dtsi/2024.2/zynq/zynq-7000.dtsi
+index dc6b6724..5044f33e 100644
+--- a/device_tree/data/kernel_dtsi/2024.2/zynq/zynq-7000.dtsi
++++ b/device_tree/data/kernel_dtsi/2024.2/zynq/zynq-7000.dtsi
+@@ -36,13 +36,6 @@
+ 				333334  1000000
+ 			>;
+ 		};
+-
+-		cpu1: cpu@1 {
+-			compatible = "arm,cortex-a9";
+-			device_type = "cpu";
+-			reg = <1>;
+-			clocks = <&clkc 3>;
+-		};
+ 	};
+ 
+ 	fpga_full: fpga-region {
+@@ -560,7 +553,7 @@
+ 			reg = <0xf889d000 0x1000>;
+ 			clocks = <&clkc 27>, <&clkc 46>, <&clkc 47>;
+ 			clock-names = "apb_pclk", "dbg_trc", "dbg_apb";
+-			cpu = <&cpu1>;
++			cpu = <&cpu0>;
+ 			out-ports {
+ 				port {
+ 					ptm1_out_port: endpoint {

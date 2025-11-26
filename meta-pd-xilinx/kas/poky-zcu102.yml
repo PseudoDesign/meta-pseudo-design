@@ -1,0 +1,14 @@
+header:
+  version: 14
+  includes:
+  - inc/base.yml
+  - inc/poky.yml
+
+machine: hello-world-zcu102-zynqmp
+target:
+  - core-image-base
+
+local_conf_header:
+  license: |
+    # LICENSE_FLAGS_ACCEPTED = "xilinx"
+    

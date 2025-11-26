@@ -34,3 +34,5 @@ repos:
       meta-mender-core:
 
   meta-pseudo-design:
+    layers:
+      meta-pd-core:
