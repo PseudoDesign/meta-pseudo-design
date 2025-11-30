@@ -17,11 +17,12 @@ local_conf_header:
     EXTRA_IMAGE_FEATURES = " debug-tweaks"
   mender_config: |
     # 16GiB total storage on SD card.
-    MENDER_STORAGE_TOTAL_SIZE_MB = "16384"
+    # MENDER_STORAGE_TOTAL_SIZE_MB = "16384"
+    MENDER_STORAGE_TOTAL_SIZE_MB = "1024"
     # 256MB partition for bootloader
     MENDER_BOOT_PART_SIZE_MB = "256"
-    MENDER_FEATURES_ENABLE:append = " mender-uboot "
-    MENDER_FEATURES_DISABLE:append = " mender-grub mender-image-uefi mender-image-sd"
+    MENDER_FEATURES_ENABLE:append = " mender-uboot mender-image-sd"
+    MENDER_FEATURES_DISABLE:append = " mender-grub mender-image-uefi "
     INHERIT += "mender-full"
     MENDER_ARTIFACT_NAME = "pd_artifact"
 

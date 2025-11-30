@@ -1,4 +1,4 @@
-From 7b2f5b7a6f4f7f92c6fec84f4c0dce55e163ef73 Mon Sep 17 00:00:00 2001
+From 26f5bdc5629adf324cfb767545618a1d12c5f0e0 Mon Sep 17 00:00:00 2001
 From: Jonathan Stroud <jonathan.stroud@amd.com>
 Date: Wed, 26 Mar 2025 18:14:14 -0600
 Subject: [PATCH] Hack for the boot_ufs command

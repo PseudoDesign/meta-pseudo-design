@@ -1,0 +1,21 @@
+From ed2879bd158a5c28219d14a9b13d2405065c383b Mon Sep 17 00:00:00 2001
+From: Adam Schafer <ams-tech@users.noreply.github.com>
+Date: Sat, 29 Nov 2025 23:51:58 -0500
+Subject: [PATCH] add env in fat
+
+---
+ configs/xilinx_zynq_virt_defconfig | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/configs/xilinx_zynq_virt_defconfig b/configs/xilinx_zynq_virt_defconfig
+index 592da3b056b..6c9c6f87ab8 100644
+--- a/configs/xilinx_zynq_virt_defconfig
++++ b/configs/xilinx_zynq_virt_defconfig
+@@ -86,6 +86,7 @@ CONFIG_CMD_MTDPARTS_SHOW_NET_SIZES=y
+ CONFIG_CMD_UBI=y
+ CONFIG_OF_BOARD=y
+ CONFIG_OF_LIST="zynq-zc702 zynq-zc706 zynq-zc770-xm010 zynq-zc770-xm011 zynq-zc770-xm011-x16 zynq-zc770-xm012 zynq-zc770-xm013 zynq-cc108 zynq-microzed zynq-minized zynq-picozed zynq-zed zynq-zturn zynq-zturn-v5 zynq-zybo zynq-zybo-z7 zynq-dlc20-rev1.0"
++CONFIG_ENV_IS_IN_FAT=y
+ CONFIG_ENV_IS_IN_MMC=y
+ CONFIG_SYS_REDUNDAND_ENVIRONMENT=y
+ CONFIG_SYS_RELOC_GD_ENV_ADDR=y
