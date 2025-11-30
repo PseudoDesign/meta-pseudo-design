@@ -10,5 +10,3 @@ PROVIDES += "u-boot"
 RPROVIDES_${PN} += "u-boot"
 
 
-SRC_URI += "file://0001-disable-fat-env.patch"
-
