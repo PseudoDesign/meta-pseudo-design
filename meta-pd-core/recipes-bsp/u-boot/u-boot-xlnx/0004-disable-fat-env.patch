@@ -1,0 +1,24 @@
+From 49d78e2d545eb583e5ae161cf127c4f6fd0ad8b4 Mon Sep 17 00:00:00 2001
+From: Adam Schafer <ams-tech@users.noreply.github.com>
+Date: Sun, 30 Nov 2025 17:46:19 -0500
+Subject: [PATCH] disable fat env
+
+---
+ configs/xilinx_zynq_virt_defconfig | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/configs/xilinx_zynq_virt_defconfig b/configs/xilinx_zynq_virt_defconfig
+index 20a0782277a..3d0f75e8059 100644
+--- a/configs/xilinx_zynq_virt_defconfig
++++ b/configs/xilinx_zynq_virt_defconfig
+@@ -87,10 +87,8 @@ CONFIG_CMD_MTDPARTS_SHOW_NET_SIZES=y
+ CONFIG_CMD_UBI=y
+ CONFIG_OF_BOARD=y
+ CONFIG_OF_LIST="zynq-zc702 zynq-zc706 zynq-zc770-xm010 zynq-zc770-xm011 zynq-zc770-xm011-x16 zynq-zc770-xm012 zynq-zc770-xm013 zynq-cc108 zynq-microzed zynq-minized zynq-picozed zynq-zed zynq-zturn zynq-zturn-v5 zynq-zybo zynq-zybo-z7 zynq-dlc20-rev1.0"
+-CONFIG_ENV_IS_IN_FAT=y
+ CONFIG_ENV_IS_IN_MMC=y
+ CONFIG_SYS_REDUNDAND_ENVIRONMENT=y
+-CONFIG_ENV_FAT_DEVICE_AND_PART="0:1"
+ CONFIG_SYS_RELOC_GD_ENV_ADDR=y
+ CONFIG_NETCONSOLE=y
+ CONFIG_SYS_FAULT_ECHO_LINK_DOWN=y
