@@ -12,3 +12,5 @@ PROVIDES += "u-boot"
 RPROVIDES_${PN} += "u-boot"
 
 
+Next step: 
+* update /etc/fw_env.config to use /uboot/uboot.env
