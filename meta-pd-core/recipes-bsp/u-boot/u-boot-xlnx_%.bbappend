@@ -5,7 +5,7 @@ UBOOT_INITIAL_ENV = "u-boot-initial-env"
 require recipes-bsp/u-boot/u-boot-mender.inc
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/u-boot-xlnx:"
-SRC_URI:append = " file://0001-add-mender-settings.patch file://0002-add-env-in-fat.patch file://0003-change-partition-table-size.patch file://0004-disable-fat-env.patch"
+SRC_URI:append = " file://0001-add-mender-settings.patch file://0002-add-env-in-fat.patch file://0003-change-partition-table-size.patch "
 
 
 PROVIDES += "u-boot"
