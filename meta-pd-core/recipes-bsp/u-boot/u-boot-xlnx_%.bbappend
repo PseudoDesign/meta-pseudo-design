@@ -11,6 +11,3 @@ SRC_URI:append = " file://0001-add-mender-settings.patch file://0002-add-env-in-
 PROVIDES += "u-boot"
 RPROVIDES_${PN} += "u-boot"
 
-
-Next step: 
-* update /etc/fw_env.config to use /uboot/uboot.env
