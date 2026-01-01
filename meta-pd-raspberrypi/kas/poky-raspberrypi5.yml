@@ -1,0 +1,9 @@
+header:
+  version: 14
+  includes:
+  - meta-pd-raspberrypi/kas/inc/base.yml
+  - meta-pd-raspberrypi/kas/inc/poky.yml
+
+
+machine: raspberrypi5
+
