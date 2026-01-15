@@ -9,6 +9,8 @@ repos:
     branch: scarthgap
     layers:
       meta-oe:
+      meta-networking:
+      meta-python:
 
   meta-lts-mixins:
     url: https://git.yoctoproject.org/meta-lts-mixins
@@ -26,12 +28,6 @@ repos:
     commit: 1c9ec1ffde75809de34c10d3ec2b40d84d258cb4
     layers:
       bitbake: disabled
-
-  meta-mender:
-    url: https://github.com/mendersoftware/meta-mender
-    branch: scarthgap
-    layers:
-      meta-mender-core:
 
   meta-pseudo-design:
     layers:

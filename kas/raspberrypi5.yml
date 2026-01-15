@@ -1,0 +1,17 @@
+header:
+  version: 14
+  includes:
+  - kas/inc/rpi.yml
+  - kas/inc/base.yml
+
+machine: raspberrypi5
+target:
+  - pd-image-host
+
+local_conf_header:
+  debug_tweaks: |
+    EXTRA_IMAGE_FEATURES = " debug-tweaks"
+  license: |
+    # Uncomment next line to allow the license
+    # See: linux-firmware-rpidistro in docs/ipcompliance.md
+    LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
